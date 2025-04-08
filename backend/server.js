@@ -13,15 +13,20 @@ const __dirname = path.resolve();
 
 connectDB();
 
-app.use(cors());
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://buycar-fn8p.onrender.com'
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
+
   
 app.use(express.json());
 
 app.use("/api/cars", carRouter);
-
-app.get("/", (req, res) => {
-  res.send("Car API is running");
-});
 
 if(process.env.NODE_ENV==="production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
