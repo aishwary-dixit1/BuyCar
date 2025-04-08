@@ -13,7 +13,7 @@ const CarCard = ({ car }) => {
     <Link to={`/car/${car._id}`}>
     <div className="bg-base-100 shadow-xl rounded-2xl overflow-hidden border border-gray-200 hover:shadow-2xl transition duration-300">
         <img
-          src={car.image || 'https://via.placeholder.com/300x200'}
+          src={car.image}
           alt={car.model}
           className="w-full h-40 object-cover"
         />
