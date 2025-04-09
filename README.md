@@ -1,4 +1,4 @@
-# BuyCars - Car Finder Web App
+# BuyCar
 
 A full-stack car listing and discovery platform where users can explore, filter, sort, and wishlist cars. Built using **React**, **Vite**, **Tailwind CSS + DaisyUI**, **Redux Toolkit**, and a custom **Node.js + Express + MongoDB** backend.
 
