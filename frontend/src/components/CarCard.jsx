@@ -10,14 +10,12 @@ const CarCard = ({ car }) => {
   const wishlist = useSelector((state) => state.wishlist);
   const isWished = wishlist.includes(car._id);
 
-  // Navigate to car details when card is clicked
   const handleCardClick = () => {
     navigate(`/car/${car._id}`);
   };
 
-  // Prevent navigation when clicking wishlist icon
   const handleWishlistClick = (e) => {
-    e.stopPropagation(); // 🔥 Prevent card click from triggering
+    e.stopPropagation(); 
     dispatch(toggleWishlist(car._id));
   };
 
